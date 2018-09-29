@@ -4,13 +4,13 @@
 #### The advantages of running Jupyterlab on [Kamiak](https://hpc.wsu.edu/users-guide/):
 + Labs can utilize scripts which access data files from a centralized location. This makes using version control (like [github](https://github.com/)) much easier because every version of the script will utilize the same path to input files and output files
 
-+ Everyone utilizes the same version of Jupyterlab
++ Jupyterlab can be used for parallel computing.
 
-+ Jupyterlab can be used for parallel computing
++ It is convenient to analyze very large datafiles when they are housed on the cluster instead of on a local machine.
 
-+ It is more convenient to analyze very large datafiles when they are housed on the cluster instead of on a local machine.
++ Jupyterlab provides a graphical interface to Kamiak reducing the amount of work necessary to get started using the cluster.
 
-+ Jupyterlab provides a graphical interface to Kamiak reducing the amount of work necessary to get started using the cluster
++ The use of notebooks increases reproducibility by encouraging clear and consistent code commenting as well as ggregating complicated workflows into a single location.
 
 + Jupyterlab can utilize the [R](https://www.datacamp.com/community/blog/jupyter-notebook-r) kernel!
 
@@ -93,6 +93,7 @@ ${link//$node/localhost}
 Have fun with the science!
 "
 
+# Email contents jupyterlab.out to the current user
 mailx -s "$subject" -S smtp=smtp://smtp.wsu.edu $address < jupyterlab.out
 
 wait
@@ -109,7 +110,7 @@ sbatch jupyterlab.sh
 This will start the jupyterlab server running on a compute node. The script will then email you instructions on how to connect to the server once it is up and running.
 
 # Optional
-Jupyterlab notebooks provide a clean way to separate data analysis workflow into blocks of markdown followed by blocks of code. Code blocks are then executed utilizing an engine known as a **kernel**. By default jupyterlab comes with the python3 kernel. However it is possible add a large number of other kernels permitting notebooks to be written in a wide variety of languages (R, Fortran, Bash, Julia, Spark, ruby, C++, Go, nodeJS, PHP, MATLAB, Wolfram Mathematica, Java, ect...) For a list of available kernels see the [wiki](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels). Instructions on installing the R and Bash kernels are included below:
+Jupyterlab notebooks provide a clean way to separate data analysis workflow into blocks of markdown followed by blocks of code. Code blocks are then executed utilizing an engine known as a **kernel**. By default jupyterlab comes with the python3 kernel. However it is possible to add a large number of other kernels permitting notebooks to be written in a wide variety of languages (R, Fortran, Bash, Julia, Spark, ruby, C++, Go, nodeJS, PHP, MATLAB, Wolfram Mathematica, Java, ect...) For a list of available kernels see the [wiki](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels). Instructions on installing the R and BASH kernels are included below:
 
 ## To make the R kernel available to jupyterlab notebooks:
 Once connected, open a terminal window from within jupyterlab (file->new->terminal) and enter the following commands **one line at a time**.
@@ -125,7 +126,7 @@ IRkernel::installspec()
 Now the R kernel will be available ***the next time you start the jupyterlab server***
 
 ## To make the BASH kernel available to jupyterlab notebooks:
-Once connected, open a terminal window from within jupyterlab (file->new->terminal) and enter the following commands one line at a time. Note the ***--user*** option on the first line. This flag circumvents the need for root access when installing of python packages on kamiak. Note: you don't need this kernel to use bash. Python has packages that allow you to interact with bash and you can access a terminal window from within Jupyter. You only really need this option if all of the code in your notebook will be written in bash.
+Once connected, open a terminal window from within jupyterlab (file->new->terminal) and enter the following commands one line at a time. Note the ***--user*** option on the first line. This flag circumvents the need for root access when installing python packages on kamiak. Note: you don't need this kernel to use BASH Python has packages that allow you to interact with BASH and you can access a terminal window from within Jupyter. You only really need this option if all of the code in your notebook will be written in BASH.
 
 
 ```bash
