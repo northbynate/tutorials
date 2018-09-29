@@ -27,7 +27,7 @@ cd ~
 nano jupyterlab.sh
 ```
 
-+ Paste the following code block into this new file
++ Copy the following code block and paste it into this new file
 + Save the file by entering ***ctrl-x***, choosing ***Yes*** when prompted and finally hitting ***enter*** to confirm the name of the file.
 
 
