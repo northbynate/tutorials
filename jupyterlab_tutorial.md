@@ -126,7 +126,7 @@ IRkernel::installspec()
 Now the R kernel will be available ***the next time you start the jupyterlab server***
 
 ## To make the BASH kernel available to jupyterlab notebooks:
-Once connected, open a terminal window from within jupyterlab (file->new->terminal) and enter the following commands one line at a time. Note the ***--user*** option on the first line. This flag circumvents the need for root access when installing python packages on kamiak. Note: you don't need this kernel to use BASH Python has packages that allow you to interact with BASH and you can access a terminal window from within Jupyter. You only really need this option if all of the code in your notebook will be written in BASH.
+Once connected, open a terminal window from within jupyterlab (file->new->terminal) and enter the following commands one line at a time. Note the ***--user*** option on the first line. This flag circumvents the need for root access when installing python packages on kamiak. Note: you don't need this kernel to use BASH. Python can submit bash commands and you can access a terminal window from within Jupyter. You only really need this option if all of the code in your notebook will be written in BASH.
 
 
 ```bash
