@@ -1,7 +1,8 @@
 
-# Jupyterlab tutorial
 
-#### The advantages of running Jupyterlab on [Kamiak](https://hpc.wsu.edu/users-guide/):
+![JupyterLab](https://cdn-images-1.medium.com/letterbox/266/72/50/50/1*wOHyKy6fl3ltcBMNpCvC6Q.png?source=logoAvatar-lo_GZXLhaU6EHCZ---95916e268740)
+
+#### The advantages of running [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html) on [Kamiak](https://hpc.wsu.edu/users-guide/):
 + Labs can utilize scripts which access data files from a centralized location. This makes using version control (like [github](https://github.com/)) much easier because every version of the script will utilize the same path to input files and output files
 
 + Jupyterlab can be used for parallel computing.
@@ -135,3 +136,7 @@ python -m bash_kernel.install
 ```
 
 Now the BASH kernel will be available ***the next time you start the jupyterlab server***
+
+## Click below for a video on getting started with jupyter notebooks
+[![](http://img.youtube.com/vi/w7jq4XgwLJQ/0.jpg)](http://www.youtube.com/watch?v=w7jq4XgwLJQ "JupyterLab Demo")
+
