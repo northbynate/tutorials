@@ -22,7 +22,7 @@
 1. Create a new script called ***jupyterlab.sh*** on Kamiak
 
 
-```python
+```
 cd ~
 nano jupyterlab.sh
 ```
@@ -31,7 +31,7 @@ nano jupyterlab.sh
 + Save the file by entering ***ctrl-x***, choosing ***Yes*** when prompted and finally hitting ***enter*** to confirm the name of the file.
 
 
-```python
+```
 #!/bin/bash
 #SBATCH --partition=cas
 #SBATCH --nodes=1
@@ -102,7 +102,7 @@ wait
 To start the jupyterlab server running, log on to Kamiak and enter the following from your home directory.
 
 
-```python
+```
 sbatch jupyterlab.sh
 ```
 
