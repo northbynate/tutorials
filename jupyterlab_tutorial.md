@@ -4,13 +4,13 @@
 #### The advantages of running Jupyterlab on [Kamiak](https://hpc.wsu.edu/users-guide/):
 + Labs can utilize scripts which access data files from a centralized location. This makes using version control (like [github](https://github.com/)) much easier because every version of the script will utilize the same path to input files and output files
 
-+ Everyone utilizes the same version of Jupyterlab
++ Jupyterlab can be used for parallel computing.
 
-+ Jupyterlab can be used for parallel computing
++ It is convenient to analyze very large datafiles when they are housed on the cluster instead of on a local machine.
 
-+ It is more convenient to analyze very large datafiles when they are housed on the cluster instead of on a local machine.
++ Jupyterlab provides a graphical interface to Kamiak reducing the amount of work necessary to get started using the cluster.
 
-+ Jupyterlab provides a graphical interface to Kamiak reducing the amount of work necessary to get started using the cluster
++ The use of notebooks increases reproducibility by encouraging clear and consistent code commenting as well as ggregating complicated workflows into a single location.
 
 + Jupyterlab can utilize the [R](https://www.datacamp.com/community/blog/jupyter-notebook-r) kernel!
 
@@ -93,6 +93,7 @@ ${link//$node/localhost}
 Have fun with the science!
 "
 
+# Email contents jupyterlab.out to the current user
 mailx -s "$subject" -S smtp=smtp://smtp.wsu.edu $address < jupyterlab.out
 
 wait
