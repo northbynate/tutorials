@@ -10,7 +10,7 @@
 
 + Jupyterlab provides a graphical interface to Kamiak reducing the amount of work necessary to get started using the cluster.
 
-+ The use of notebooks increases reproducibility by encouraging clear and consistent code commenting as well as ggregating complicated workflows into a single location.
++ The use of notebooks increases reproducibility by encouraging clear and consistent code commenting as well as aggregating complicated workflows into a single location.
 
 + Jupyterlab can utilize the [R](https://www.datacamp.com/community/blog/jupyter-notebook-r) kernel!
 
