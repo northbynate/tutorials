@@ -112,7 +112,7 @@ This will start the jupyterlab server running on a compute node. The script will
 Once connected, open a terminal window from within jupyterlab (file->new->terminal) and enter the following commands **one line at a time**.
 
 
-```python
+```
 R
 install.packages('devtools', dependencies=TRUE)
 devtools::install_github('IRkernel/IRkernel')
