@@ -22,7 +22,7 @@
 1. Create a new script called ***jupyterlab.sh*** on Kamiak
 
 
-```
+```bash
 cd ~
 nano jupyterlab.sh
 ```
@@ -31,7 +31,7 @@ nano jupyterlab.sh
 + Save the file by entering ***ctrl-x***, choosing ***Yes*** when prompted and finally hitting ***enter*** to confirm the name of the file.
 
 
-```
+```bash
 #!/bin/bash
 #SBATCH --partition=cas
 #SBATCH --nodes=1
@@ -102,17 +102,20 @@ wait
 To start the jupyterlab server running, log on to Kamiak and enter the following from your home directory.
 
 
-```
+```bash
 sbatch jupyterlab.sh
 ```
 
 This will start the jupyterlab server running on a compute node. The script will then email you instructions on how to connect to the server once it is up and running.
 
+# Optional
+Jupyterlab notebooks provide a clean way to separate data analysis workflow into blocks of markdown followed by blocks of code. Code blocks are then executed utilizing an engine known as a **kernel**. By default jupyterlab comes with the python3 kernel. However it is possible add a large number of other kernels permitting notebooks to be written in a wide variety of languages (R, Fortran, Bash, Julia, Spark, ruby, C++, Go, nodeJS, PHP, MATLAB, Wolfram Mathematica, Java, ect...) For a list of available kernels see the [wiki](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels). Instructions on installing the R and Bash kernels are included below:
+
 ## To make the R kernel available to jupyterlab notebooks:
 Once connected, open a terminal window from within jupyterlab (file->new->terminal) and enter the following commands **one line at a time**.
 
 
-```
+```bash
 R
 install.packages('devtools', dependencies=TRUE)
 devtools::install_github('IRkernel/IRkernel')
@@ -120,3 +123,14 @@ IRkernel::installspec()
 ```
 
 Now the R kernel will be available ***the next time you start the jupyterlab server***
+
+## To make the BASH kernel available to jupyterlab notebooks:
+Once connected, open a terminal window from within jupyterlab (file->new->terminal) and enter the following commands one line at a time. Note the ***--user*** option on the first line. This flag circumvents the need for root access when installing of python packages on kamiak. Note: you don't need this kernel to use bash. Python has packages that allow you to interact with bash and you can access a terminal window from within Jupyter. You only really need this option if all of the code in your notebook will be written in bash.
+
+
+```bash
+pip install bash_kernel --user
+python -m bash_kernel.install
+```
+
+Now the BASH kernel will be available ***the next time you start the jupyterlab server***
