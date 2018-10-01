@@ -23,7 +23,7 @@
 1. Create a new script called ***jupyterlab.sh*** on Kamiak
 
 
-```python
+```bash
 cd ~
 nano jupyterlab.sh
 ```
@@ -32,7 +32,7 @@ nano jupyterlab.sh
 + Save the file by entering ***ctrl-x***, choosing ***Yes*** when prompted and finally hitting ***enter*** to confirm the name of the file.
 
 
-```python
+```bash
 #!/bin/bash
 #SBATCH --partition=cas
 #SBATCH --nodes=1
@@ -104,7 +104,7 @@ wait
 To start the jupyterlab server running, log on to Kamiak and enter the following from your home directory.
 
 
-```python
+```bash
 sbatch jupyterlab.sh
 ```
 
@@ -117,7 +117,7 @@ Jupyterlab notebooks provide a clean way to separate data analysis workflow into
 Once connected, open a terminal window from within jupyterlab (file->new->terminal) and enter the following commands **one line at a time**.
 
 
-```python
+```bash
 R
 install.packages('devtools', dependencies=TRUE)
 devtools::install_github('IRkernel/IRkernel')
@@ -130,7 +130,7 @@ Now the R kernel will be available ***the next time you start the jupyterlab ser
 Once connected, open a terminal window from within jupyterlab (file->new->terminal) and enter the following commands one line at a time. Note the ***--user*** option on the first line. This flag circumvents the need for root access when installing python packages on kamiak. Note: you don't need this kernel to use BASH. Python can submit bash commands and you can access a terminal window from within Jupyter. You only really need this option if all of the code in your notebook will be written in BASH.
 
 
-```python
+```bash
 pip install bash_kernel --user
 python -m bash_kernel.install
 ```
